@@ -88,7 +88,6 @@ class Api::Robot::OrdersController < ApplicationController
 				placement = cmd[index + 1]
 				placement = placement.split(",")
 				if placement.count == 3
-					binding.pry
 					if placement[0].match("^[0-9]*$").present? && placement[0].to_i < 5 && placement[1].match("^[0-9]*$").present? && placement[1].to_i < 5 && DIRECTION.include?(placement[2])
 						i = index
 						break 
